@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mockup - groceries</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <script src="main.js"></script>
+</head>
+<body onscroll="myScroll()">
+    <div class="menu-container">
+        <div id="menu1" class="menu">
+            <div id="menu" class="icon-menu">
+                <!--<i class="fas fa-bars"></i>-->
+                <button class="reset-style hamburger" id="hamburger-3" onclick="clickMenu(this.id, -1);">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </div>
+        </div>
+        <div id="menu2" class="menu2 hide">
+        </div>
+        <div id="menu3" class="menu3 hide">
+        </div>
+    </div>
+    <div id="cart" class="icon-cart" onclick="clickNext(this.id);">
+        <i class="fas fa-shopping-cart"></i>
+        <p id="roundValue" class="round-value"></p>
+    </div>
+    <div id="tab1" class="tab">
+        <div id="list" class="list">
+            <div id="item1" class="item" onclick="clickNext(this.id);">
+                <div class="flex2">
+                    <div class="picture-item-circle">
+                        <img src="assets/pizza2.png" alt="">
+                    </div>
+                </div>
+                <div class="body-item">
+                    <div class="title-item">
+                        &nbsp;Pizza
+                    </div>
+                    <div class="subtitle-item">
+                        &nbsp;30 products
+                    </div>
+                </div>
+                <div class="flex1">
+                    <div class="button-item">
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="item2" class="item" onclick="clickNext(this.id);">
+                <div class="flex2">
+                    <div class="picture-item-square">
+                        <img src="assets/burger2.png" alt="">
+                    </div>
+                </div>
+                <div class="body-item">
+                    <div class="title-item">
+                        &nbsp;Burger
+                    </div>
+                    <div class="subtitle-item">
+                        &nbsp;1 products
+                    </div>
+                </div>
+                <div class="flex1">
+                    <div class="button-item">
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="item3" class="item" onclick="clickNext(this.id);">
+                <div class="flex2">
+                    <div class="picture-item-triangle">
+                        <img src="assets/japan2.png" alt="">
+                    </div>
+                </div>
+                <div class="body-item">
+                    <div class="title-item">
+                        &nbsp;Japan Food
+                    </div>
+                    <div class="subtitle-item">
+                        &nbsp;15 products
+                    </div>
+                </div>
+                <div class="flex1">
+                    <div class="button-item">
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="item1" class="item" onclick="clickNext(this.id);">
+                    <div class="flex2">
+                        <div class="picture-item-circle">
+                            <img src="assets/pizza2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="body-item">
+                        <div class="title-item">
+                            &nbsp;Pizza
+                        </div>
+                        <div class="subtitle-item">
+                            &nbsp;30 products
+                        </div>
+                    </div>
+                    <div class="flex1">
+                        <div class="button-item">
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="item2" class="item" onclick="clickNext(this.id);">
+                    <div class="flex2">
+                        <div class="picture-item-square">
+                            <img src="assets/burger2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="body-item">
+                        <div class="title-item">
+                            &nbsp;Burger
+                        </div>
+                        <div class="subtitle-item">
+                            &nbsp;1 products
+                        </div>
+                    </div>
+                    <div class="flex1">
+                        <div class="button-item">
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div id="item3" class="item" onclick="clickNext(this.id);">
+                    <div class="flex2">
+                        <div class="picture-item-triangle">
+                            <img src="assets/japan2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="body-item">
+                        <div class="title-item">
+                            &nbsp;Japan Food
+                        </div>
+                        <div class="subtitle-item">
+                            &nbsp;15 products
+                        </div>
+                    </div>
+                    <div class="flex1">
+                        <div class="button-item">
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div id="tab2" class="tab hide hide-tab-right">
+        <div class="list">
+            <div class="title">
+                Restaurant<br>itens
+            </div>
+            <div id="list" class="list-with-title">
+                <div id="product1" class="item-product" onclick="clickProduct(this.id)">
+                    <div class="flex2">
+                        <div class="picture-item-circle">
+                            <img src="assets/pizza2.png" alt="">
+                        </div>
+                        <div id="rank" class="rank height-0-hidden">
+                                <i id="heart1" class="fas fa-heart" onclick="clickOption(this.id, 'heard')"></i><br>
+                                <i id="talk2" class="fas fa-comment" onclick="clickOption(this.id, 'heard')"></i><br>
+                                <i id="share3" class="fas fa-share" onclick="clickOption(this.id, 'heard')"></i>
+                        </div>
+                    </div>
+                    <div class="body-item">
+                        <div class="title-item-product">
+                            Pizza with cheese and pork
+                        </div>
+                        <div class="starts">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div id="descriptionProduct1" class="description-item-product height-0-hidden">
+                                orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                        <div class="subtitle-item container">
+                            <div class="flex4">&nbsp;250g</div>
+                            <div class="flex1 price-item-product">R$25.00</div>
+                        </div>
+                    </div>
+                    <div class="flex1">
+                        <div id="add1" class="button-item" onclick="clickButtonEffect(this.id)">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tab3" class="tab hide hide-tab-right">
+        <div class="list">
+            <div id="ti" class="title" onclick="clickNext(this.id, true);">
+                Shoping<br>cart
+            </div>
+
+            <div id="list" class="list-with-title">
+                <div id="product1" class="item-product" onclick="clickProduct(this.id)">
+                    <div class="flex2">
+                        <div class="picture-item-circle">
+                            <img src="assets/pizza2.png" alt="">
+                        </div>
+                        <div id="rank" class="rank height-0-hidden">
+                                <i id="heart1" class="fas fa-heart" onclick="clickOption(this.id, 'heard')"></i><br>
+                                <i id="talk2" class="fas fa-comment" onclick="clickOption(this.id, 'heard')"></i><br>
+                                <i id="share3" class="fas fa-share" onclick="clickOption(this.id, 'heard')"></i>
+                        </div>
+                    </div>
+                    <div class="body-item">
+                        <div class="title-item-product">
+                            &nbsp;Pizza with cheese and pork
+                        </div>
+                        <div class="starts">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div id="descriptionProduct1" class="description-item-product height-0-hidden">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                        <div class="subtitle-item container">
+                            <div class="flex4">&nbsp;250g</div>
+                            <div class="flex1 price-item-product">R$25.00</div>
+                        </div>
+                    </div>
+                    <div class="flex1">
+                        <div id="add1" class="button-item-cart" onclick="clickButtonEffect(this.id)">
+                            <i class="fas fa-minus"></i>
+                            1
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cartTotals" class="totals" onclick="clickOpenCart();">
+                <header class="container">
+                    <p>Cart checkout totals</p>
+                    <i id="iconUpDown" class="fas fa-chevron-down fa-1x"></i>
+                </header>
+                <div id="bodyCartTotals" class="container">
+                    <div class="labelValue">
+                        <p>Number of itens:</p>
+                        <p>5</p>
+                    </div>
+                    <div class="labelValue">
+                        <p>Subtotal:</p>
+                        <p>R$25,00</p>
+                    </div>
+                    <div class="labelValue">
+                        <p>Tax:</p>
+                        <p>R$1,00</p>
+                    </div>
+                    <div class="labelValue">
+                        <p>Total:</p>
+                        <p>R$26,00</p>
+                    </div>
+                    <footer>
+                        <div class="miniButtons">
+                            <i class="fas fa-trash-alt"></i>
+                            <i class="far fa-bookmark"></i>
+                        </div>
+                        <div class="checkout">
+                            <button class="reset-style">Checkout</button>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
