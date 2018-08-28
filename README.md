@@ -1,5 +1,5 @@
 # furry-adventure
-The begin of my adventure with UI.
+An adventure with UI and evolution projects.
 
 # My to-do list
 - [x] get some mockup/concept on pinterest to base (1-only-mockup)
